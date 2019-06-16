@@ -5,7 +5,7 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - /Users/pasangamage/www/docker_test/wordpress:/var/www/html
+#      - PATH TO YOUR DIR GOES HERE ex:  /Users/guest/www/myproject/wordpress:/var/www/html
       - ./docker-conf/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./docker-conf/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
@@ -15,7 +15,7 @@ services:
     image: nanoninja/php-fpm:latest
     volumes:
       - ./docker-conf/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - /Users/pasangamage/www/docker_test/wordpress:/var/www/html
+#     - PATH TO YOUR PHP ex:  /Users/guest/www/myproject/wordpress:/var/www/html
     links:
       - db
   db:
